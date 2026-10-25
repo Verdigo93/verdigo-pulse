@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verdigo Pulse v1.4: real upcoming events, explicit source health, no fake data."""
+"""Verdigo Pulse v2.1: real upcoming events, explicit source health, no fake data."""
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from urllib.request import Request, urlopen
 from urllib.parse import urlparse, parse_qs, urlencode, quote
@@ -99,13 +99,13 @@ FEEDS={
 # Google News search RSS: forward-looking headlines and announced future actions.
 # These remain RESEARCH LEADS, never confirmed scheduled events.
 DISCOVERY_QUERIES={
- 'crypto':['crypto token unlock upcoming October November 2026','blockchain upgrade mainnet launch scheduled upcoming','crypto airdrop listing launch date announced'],
- 'politics':['upcoming parliament vote summit meeting next week','election debate scheduled October November 2026'],
- 'gaming':['video game releases next week October November 2026','gaming showcase livestream announced release date 2026'],
- 'ai':['AI conference keynote launch scheduled November 2026','artificial intelligence model product announcement upcoming'],
- 'finance':['economic data release CPI interest rate decision next week','central bank rate announcement scheduled 2026'],
- 'football':['football fixtures next week upcoming tournament 2026'],
- 'sports':['upcoming sports finals races tournament October November 2026']
+ 'crypto':['upcoming crypto token unlock mainnet launch network upgrade','upcoming cryptocurrency airdrop exchange listing token launch'],
+ 'politics':['upcoming parliamentary vote summit election debate scheduled','upcoming government cabinet meeting bill vote diplomatic summit'],
+ 'gaming':['upcoming video game release dates next week new game launches','upcoming gaming showcase livestream publisher announcement'],
+ 'ai':['upcoming AI conference keynote artificial intelligence event','upcoming AI model launch product announcements AI summit'],
+ 'finance':['upcoming economic calendar CPI jobs data interest rate meeting','upcoming central bank decision earnings financial report'],
+ 'football':['upcoming football matches fixtures next week official schedule'],
+ 'sports':['upcoming sports championships tennis racing tournament calendar']
 }
 for _category,_queries in DISCOVERY_QUERIES.items():
     for _i,_q in enumerate(_queries,1):
