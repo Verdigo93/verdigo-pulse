@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: verdigo-pulse
+    runtime: python
+    plan: free
+    buildCommand: "python -m py_compile server.py"
+    startCommand: "python server.py"
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
